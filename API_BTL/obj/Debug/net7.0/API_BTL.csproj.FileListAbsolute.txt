@@ -31,3 +31,16 @@ C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\obj\Debug\net7.0\refint\API_BT
 C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\obj\Debug\net7.0\API_BTL.pdb
 C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\obj\Debug\net7.0\API_BTL.genruntimeconfig.cache
 C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\obj\Debug\net7.0\ref\API_BTL.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\BussinessLayer.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\Model.dll
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\BussinessLayer.pdb
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\Model.pdb
+C:\Users\macbookpro\source\repos\BTL_Hung\API_BTL\bin\Debug\net7.0\DataAccessLayer.pdb
