@@ -21,5 +21,27 @@ namespace API_BTL.Controllers
         {
             return _ProductBUS.GetallProduct();
         }
+
+        [Route("create-prroduct")]
+        [HttpPost]
+        public bool create(ProductModel model) 
+        {
+            return _ProductBUS.create(model);
+        }
+
+        [Route("update-prroduct")]
+        [HttpPut]
+        public bool update(ProductModel model)
+        {
+            return _ProductBUS.update (model);
+        }
+
+        [Route("delete-product")]
+        [HttpDelete]
+        public bool delete(int Product_id)
+        {
+            return _ProductBUS.delete(Product_id);
+        }
     }
+
 }

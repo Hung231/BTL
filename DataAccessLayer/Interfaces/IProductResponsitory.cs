@@ -10,5 +10,13 @@ namespace DataAccessLayer.Interfaces
     public partial interface IProductResponsitory
     {
         List<ProductModel> GetallProduct();
+
+        bool create(ProductModel model);
+
+        bool update(ProductModel model);
+
+        bool delete(int product_id);    
     }
+
+     
 }

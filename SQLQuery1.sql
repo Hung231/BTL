@@ -91,3 +91,28 @@ as
 begin
 	select*from Products
 end
+
+create proc sp_create_product(@product_id int,@product_name nvarchar(255), @description text, @price decimal(10,2), @category nvarchar(50))
+as
+begin
+	insert into Products(product_id,product_name,description,price,category)
+	values (@product_id,@product_name,@description,@price,@category)
+end
+drop proc sp_create_product
+exec sp_create_product '4', 'ao thun','ao thun nu', '30.01', 'ao'
+select*from Products
+
+create proc sp_update_product(@product_id int,@product_name nvarchar(255), @description text, @price decimal(10,2), @category nvarchar(50))
+as
+begin
+	update Products
+	set product_id = @product_id, product_name = @product_name, description = @description, price = @price, category = @category
+	where product_id = @product_id
+end
+
+create proc sp_delete_product(@product_id int)
+as
+begin
+	delete from Products
+	where product_id = @product_id
+end

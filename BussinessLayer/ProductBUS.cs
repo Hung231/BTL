@@ -23,5 +23,20 @@ namespace BussinessLayer
         {
             return _res.GetallProduct();
         }
+
+        public bool create(ProductModel model)
+        {
+            return _res.create(model); 
+        }
+
+        public bool update(ProductModel model)
+        {
+            return _res.update(model);
+        }
+        
+        public bool delete(int product_id) 
+        {
+            return _res.delete(product_id);
+        }
     }
 }

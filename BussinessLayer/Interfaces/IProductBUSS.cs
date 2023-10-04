@@ -10,5 +10,11 @@ namespace BussinessLayer.Interfaces
     public partial interface IProductBUSS
     {
         List<ProductModel> GetallProduct();
+
+        bool create(ProductModel model);
+
+        bool update(ProductModel model);
+
+        bool delete(int product_id);
     }
 }
