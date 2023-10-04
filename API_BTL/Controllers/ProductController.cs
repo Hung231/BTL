@@ -15,21 +15,21 @@ namespace API_BTL.Controllers
             _ProductBUS = product;
         }
 
-        [Route("get-all-prroduct")]
+        [Route("get-all-product")]
         [HttpGet]
         public IEnumerable<ProductModel> GetProductModel() 
         {
             return _ProductBUS.GetallProduct();
         }
 
-        [Route("create-prroduct")]
+        [Route("create-product")]
         [HttpPost]
         public bool create(ProductModel model) 
         {
             return _ProductBUS.create(model);
         }
 
-        [Route("update-prroduct")]
+        [Route("update-product")]
         [HttpPut]
         public bool update(ProductModel model)
         {

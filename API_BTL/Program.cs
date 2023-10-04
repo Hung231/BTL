@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
 builder.Services.AddTransient<IProductResponsitory, ProductResponsitory>();
 builder.Services.AddTransient<IProductBUSS, ProductBUS>();
+builder.Services.AddTransient<ICustomerResponsitory, CustomerResponsitory>();
+builder.Services.AddTransient<ICustomerBUSS, CustomerBUS>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
