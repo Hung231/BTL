@@ -18,9 +18,9 @@ namespace BussinessLayer
             _res = customerResponsitory;
         }
 
-        public List<CustomerModel> GetallCustomers()
+        public List<CustomerModel> GetallCustomer()
         {
-            return _res.GetallCustomers();
+            return _res.GetallCustomer();
         }
 
         public bool create(CustomerModel model)

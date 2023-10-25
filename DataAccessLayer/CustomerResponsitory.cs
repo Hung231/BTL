@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public  class CustomerResponsitory :ICustomerResponsitory
+    public  class CustomerResponsitory : ICustomerResponsitory
     {
         public IDatabaseHelper _dbHelper;
 
@@ -17,7 +17,7 @@ namespace DataAccessLayer
             _dbHelper = databaseHelper;
         }
 
-        public List<CustomerModel> GetallCustomers()
+        public List<CustomerModel> GetallCustomer()
         {
             string msgError = "";
             try

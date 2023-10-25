@@ -20,7 +20,7 @@ namespace API_BTL.Controllers
         [HttpGet]
         public IEnumerable<CustomerModel> GetCustomerModel()
         {
-            return _CustomerBUS.GetallCustomers();
+            return _CustomerBUS.GetallCustomer();
         }
 
         [Route("create-customer")]
@@ -39,9 +39,9 @@ namespace API_BTL.Controllers
 
         [Route("delete-customer")]
         [HttpDelete]
-        public bool delete(int Customer_id)
+        public bool delete(int customer_id)
         {
-            return _CustomerBUS.delete(Customer_id);
+            return _CustomerBUS.delete(customer_id);
         }
     }
 }

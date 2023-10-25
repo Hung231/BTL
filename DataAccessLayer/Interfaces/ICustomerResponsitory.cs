@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces
 {
     public partial interface ICustomerResponsitory
     {
-        List<CustomerModel> GetallCustomers();
+        List<CustomerModel> GetallCustomer();
 
         bool create(CustomerModel model);
 

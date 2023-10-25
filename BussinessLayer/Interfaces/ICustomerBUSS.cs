@@ -9,7 +9,7 @@ namespace BussinessLayer.Interfaces
 {
     public partial interface ICustomerBUSS
     {
-        List<CustomerModel> GetallCustomers();
+        List<CustomerModel> GetallCustomer();
 
         bool create(CustomerModel model);
 
