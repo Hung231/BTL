@@ -29,14 +29,14 @@ namespace API_BTL.Controllers
             return _OrderItemsBUS.create(model);
         }
 
-        [Route("update-order")]
+        [Route("update-order-item")]
         [HttpPut]
         public bool update(OrderItemsModel model)
         {
             return _OrderItemsBUS.update(model);
         }
 
-        [Route("delete-order")]
+        [Route("delete-order-item")]
         [HttpDelete]
         public bool delete(int order_item_id)
         {

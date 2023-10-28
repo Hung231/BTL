@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer
 {
-    internal class UserBUS : IUserBUSS
+    public partial class UserBUS : IUserBUSS
     {
         public IUserResponsitory _res;
 

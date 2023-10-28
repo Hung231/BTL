@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class UserResponsitory : IUserResponsitory
+    public class UserResponsitory : IUserResponsitory
     {
         public IDatabaseHelper _dbHelper;
 

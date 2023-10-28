@@ -260,3 +260,33 @@ begin
 	delete from Users
 	where user_id = @user_id
 end
+
+
+/*------------------------API Admin------------------------------------------------*/
+create proc sp_get_all_admin
+as
+begin
+	select*from Admin
+end
+
+create proc sp_create_admin(@admin_id int,@user_id int, @username varchar(255), @password varchar(255), @email varchar(255), @full_name varchar(255), @role varchar(50))
+as
+begin
+	insert into Admin(admin_id, user_id, username, password, email, full_name, role)
+	values (@admin_id,@user_id,@username,@password,@email,@full_name,@role)
+end
+
+create proc sp_update_admin(@admin_id int,@user_id int, @username varchar(255), @password varchar(255), @email varchar(255), @full_name varchar(255), @role varchar(50))
+as
+begin
+	update Admin
+	set admin_id = @admin_id, user_id = @user_id, username = @username,password = @password, email = @email, full_name = @full_name,  role = @role
+	where user_id = @user_id
+end
+
+create proc sp_delete_admin(@admin_id int)
+as
+begin
+	delete from Admin
+	where admin_id = @admin_id
+end

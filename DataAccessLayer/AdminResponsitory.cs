@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class ProductResponsitory : IProductResponsitory
+    public class AdminResponsitory : IAdminResponsitory
     {
         public IDatabaseHelper _dbHelper;
 
-        public ProductResponsitory(IDatabaseHelper databaseHelper)
+        public AdminResponsitory(IDatabaseHelper databaseHelper)
         {
             _dbHelper = databaseHelper;
         }
 
-        public List<ProductModel> GetallProduct()
+        public List<AdminModel> GetallAdmin()
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_get_all_product");
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_get_all_admin");
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<ProductModel>().ToList();
+                return dt.ConvertTo<AdminModel>().ToList();
             }
             catch (Exception ex)
             {
@@ -33,18 +33,21 @@ namespace DataAccessLayer
             }
         }
 
-        public bool create(ProductModel model)
+        public bool create(AdminModel model)
         {
             string msgError = "";
             try
             {
                 string result = "";
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_create_product",
-                    "@product_id", model.product_id,
-                    "@product_name", model.product_name,
-                    "@description", model.description,
-                    "@price", model.price,
-                    "@category", model.category);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_create_admin",
+                    "@admin_user", model.admin_id,
+                    "@user_id", model.user_id,
+                    "@username", model.username,
+                    "@password", model.password,
+                    "@email", model.email,
+                    "@full_name", model.full_name,
+                    "@role", model.role);
+
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -57,18 +60,20 @@ namespace DataAccessLayer
             }
         }
 
-        public bool update(ProductModel model)
+        public bool update(AdminModel model)
         {
             string msgError = "";
             try
             {
                 string result = "";
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_update_product",
-                    "@product_id", model.product_id,
-                    "@product_name", model.product_name,
-                    "@description", model.description,
-                    "@price", model.price,
-                    "@category", model.category);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_update_admin",
+                    "@admin_user", model.admin_id,
+                    "@user_id", model.user_id,
+                    "@username", model.username,
+                    "@password", model.password,
+                    "@email", model.email,
+                    "@full_name", model.full_name,
+                    "@role", model.role);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -81,14 +86,14 @@ namespace DataAccessLayer
             }
         }
 
-        public bool delete(int product_id)
+        public bool delete(int admin_id)
         {
             string msgError = "";
             try
             {
                 string result = "";
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_delete_product",
-                    "@product_id", product_id);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_delete_admin",
+                    "@admin_id", admin_id);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -100,6 +105,5 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-
     }
 }

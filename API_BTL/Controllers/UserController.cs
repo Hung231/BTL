@@ -36,7 +36,7 @@ namespace API_BTL.Controllers
             return _UserBUS.update(model);
         }
 
-        [Route("delete-product")]
+        [Route("delete-user")]
         [HttpDelete]
         public bool delete(int user_id)
         {
